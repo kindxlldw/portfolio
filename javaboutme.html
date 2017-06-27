@@ -2,7 +2,7 @@
 <html>
 <style>
 body, html {
-    height: 100%;
+    height: 150%;
     margin: 0;
 }
 
@@ -10,7 +10,7 @@ body, html {
     background-image: url("backg2.jpg");
 
     /* Full height */
-    height: 100%; 
+    height: 175%; 
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -19,16 +19,76 @@ body, html {
 }
 </style>
 <head>
-<h2>About Kindall...</h2>
+About Kindall...
 <body>
 
    <div class="bg"></div>
   
-  
+  <style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  height: 175%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color:black;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<h2>Fade in Overlay</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="backg2.jpg" alt="backg2" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   <body2>
   <button type="button"
   onclick="document.getElementById("demo").innerHTML = new Date("January 25 2015")">
   Click me to display Date and Time.</button>
+  
   </body2>
 <p id="demo"></p>
     </head>
